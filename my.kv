@@ -1,0 +1,54 @@
+<MyGrid>:
+
+    title: title
+    author: author
+    isi: isi
+    hasil:hasil
+
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height -200
+        pos: 100, 100
+        padding : 10
+        spacing : 10
+        row_default_height:30
+
+        GridLayout:
+            padding : 10
+            spacing : 10
+            row_default_height:30
+            cols:2
+            rows:3
+
+            Label:
+                text: "Title"
+
+            TextInput:
+                id: title
+                multiline:False
+
+            Label:
+                text: "Author"
+
+            TextInput:
+                id: author
+                multiline:False
+
+            Label:
+                text: "Text"
+
+            TextInput:
+                id: isi
+                multiline:True
+
+
+        Button:
+            text:"Check"
+            size_hint:(.2, .2)
+            pos_hint:{'center_x': .2, 'center_y': .2}
+            on_press: root.btn()
+
+        Label:
+            id:hasil
+            text: ""
+
